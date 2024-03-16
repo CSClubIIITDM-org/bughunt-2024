@@ -13,11 +13,11 @@ int main(){
     int n = sizeof(a)/sizeof(a[0]);
     int m = sizeof(b)/sizeof(b[0]);
 
-    for(i=0;i<n;i++){
+    for(i;i<n;i++){
         printf("%d ", a[i]);
     }
     printf("\n");
-    for(i;i<m;i++){
+    for(i=0;i<m;i++){
         printf("%d ", b[i]);
     }
 }
