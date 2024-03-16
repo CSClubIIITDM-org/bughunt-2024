@@ -6,13 +6,13 @@ def countSort(arr):
     ans = [0 for i in range(len(arr))]
     for i in arr:
         count[i] += 1
-    for i in range(k+1):
+    for i in range(1, k+1):  # Fix: Starting from 1 instead of 0
         count[i] += count[i-1]
     for i in range(len(arr)-1, -1, -1):
-        ans[count[arr[i]]] = arr[i]
+        ans[count[arr[i]] - 1] = arr[i]  # Fix: Decrement count[arr[i]] by 1
         count[arr[i]] -= 1
-    return ans 
+    return ans
 
 arr = [3, 4, 12, 2, 4, 5, 5, 6, 12, 33, 10, 1, 2, 8, 6]
 ans = countSort(arr)
-print (f"Sorted character array is {ans}")
+print(f"Sorted character array is {ans}")

@@ -32,3 +32,5 @@ class Solution:
         result = dummyHead.next
         dummyHead.next = None
         return result
+    
+
