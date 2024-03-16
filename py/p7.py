@@ -1,9 +1,5 @@
-#program to add two numbers represented by linked lists in reverse order
-#e.g. 2->4->3 + 5->6->4 = 7->0->8 (342 + 465 = 807)
-
-# Definition for singly-linked list.
 class ListNode(object):
-    def __init__(self, val=0, next=None):
+    def _init_(self, val=0, next=None):
         self.val = val
         self.next = next
 
@@ -18,7 +14,7 @@ class Solution:
             digit1 = l1.val if l1 is not None else 0
             digit2 = l2.val if l2 is not None else 0
 
-            sum = digit1 + digit2 + carry
+            sum_val = digit1 + digit2 + carry
             digit = sum % 10
             carry = sum // 10
 
@@ -30,5 +26,4 @@ class Solution:
             l2 = l2.next if l2 is not None else None
 
         result = dummyHead.next
-        dummyHead.next = None
         return result
