@@ -6,9 +6,12 @@ def listmaker(r,g,b,list1=[]):
     list1.append(b)
     return list1
 
-pixel1=listmaker(23,78,34)
-pixel2=listmaker(210,56,67)
-pixel3=listmaker(23,78,248)
+pixel1=[]
+pixel2=[]
+pixel3=[]
+pixel1=listmaker(23,78,34,pixel1)
+pixel2=listmaker(210,56,67,pixel2)
+pixel3=listmaker(23,78,248,pixel3)
 r=(pixel1[0]+pixel2[0]+pixel3[0])/3
 g=(pixel1[1]+pixel2[1]+pixel3[1])/3
 b=(pixel1[2]+pixel2[2]+pixel3[2])/3
