@@ -1,6 +1,9 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
+
+int Check(char *S);
 
 void Upper(char *word) {
     for(int k = 0; word[k]; k ++)
@@ -9,13 +12,14 @@ void Upper(char *word) {
 }
 
 int Check(char *S) {
-    for(int k = 0, v = 0; S[k]; k++)
+    int v = 0; 
+    for(int k = 0; S[k]; k++)
         switch(S[k]) {
-            case A:
-            case E:
-            case I:
-            case O:
-            case U: v++;
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U': v++;
         }
     return v;
 }
@@ -30,7 +34,7 @@ int main() {
         cout << Check(str) << endl;
         cout << "Type yes to continue, no to exit.";
         cin >> next;
-    } while(strcmp(next, "yes"));
+    } while(strcmp(next, "yes") == 0);
 
-    return 0;
+    return 0;
 }
