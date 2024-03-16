@@ -2,10 +2,10 @@
 
 #include <stdio.h>
 
-float computeAverage(float* x, size_t* N) {
+float computeAverage(float* x, float* N) {
     float numerator = 0.0;
     float denominator = 0.0;
-    for (size_t i = 0; i < (size_t)N; i++) {
+    for (size_t i = 0; i < N; i++) {
         numerator += x[i];
         denominator++;
     }

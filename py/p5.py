@@ -12,6 +12,6 @@ def get_number():
         return str_to_print
 
     except ValueError:
-        get_number()
+        return get_number()
 
 print(get_number())

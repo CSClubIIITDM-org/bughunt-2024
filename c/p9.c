@@ -34,7 +34,7 @@ int main() {
     // Multiples of 6
     int NOut;
     int* multiples = filterMultiples(arr, 10, &NOut, 6);
-    for (int i = 0; i < NOut; i++) {
+    for (int i = 0; i < N; i++) {
         printf("%i ", multiples[i]);
     }
     printf("\n");

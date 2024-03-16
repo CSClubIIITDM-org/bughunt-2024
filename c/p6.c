@@ -3,8 +3,9 @@
 #include<stdio.h>
 int *fun()
 {
-    int x = 5;
-    return &x;
+    int *x = (int *)malloc(sizeof(int));
+    *x = 5;
+    return x;
 }
 int main()
 {

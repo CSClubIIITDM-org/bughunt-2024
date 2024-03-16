@@ -9,11 +9,16 @@ using namespace std;
 string caesar(string s, int k, string direction){
     string ans = "";
     for(int i=0;i<s.length();i++){
-        if(direction == "encode"){
-            ans += s[i] + k;
+        if(isalpha(s[i])){
+            if(direction == "encode"){
+                ans += char(s[i] + k);
+            }
+            else if(direction == "decode"){
+                ans += char(s[i] - k);
+            }
         }
-        else if(direction == "decode"){
-            ans += s[i] - k;
+        else{
+            ans += s[i];
         }
     }
     return ans;

@@ -2,14 +2,14 @@
 
 def countSort(arr):
     k = max(arr)
-    count = [0 for i in range(k+1)]
+    count = [0 for i in range(1,k+1)]
     ans = [0 for i in range(len(arr))]
     for i in arr:
         count[i] += 1
     for i in range(k+1):
         count[i] += count[i-1]
     for i in range(len(arr)-1, -1, -1):
-        ans[count[arr[i]]] = arr[i]
+        ans[count[arr[i]]-1] = arr[i]
         count[arr[i]] -= 1
     return ans 
 

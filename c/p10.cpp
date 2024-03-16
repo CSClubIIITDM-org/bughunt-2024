@@ -1,28 +1,28 @@
-//CPP program to implement circular linked list
-
-#include<bits/stdc++.h>
-using namespace std;
-struct node{            //defining the structure of the node
-    int data;
-    struct node *next;
-};
-//class definition for circular linked list
-class CLL{       
-private:
-    struct node *tail;
-public:
-    CLL(){
-        this->tail=NULL;    //constructor to initialize the tail pointer
-    }
-    void insert(int,bool);
-    void deletenode();    //member function
-    void display();
-    ~CLL(){         //destructor to delete the list
-        struct node *ptr=tail->next;
-        while(ptr!=tail){
-            struct node *temp=ptr;
-            ptr=ptr->next;
-            delete temp;
+    //CPP program to implement circular linked list
+    
+    #include<bits/stdc++.h>
+    using namespace std;
+    struct node{            //defining the structure of the node
+        int data;
+        struct node *next;
+    };
+    //class definition for circular linked list
+    class CLL{       
+    private:
+        struct node *tail;
+    public:
+        CLL(){
+            this->tail=NULL;    //constructor to initialize the tail pointer
+        }
+        void insert(int,bool);
+        void deletenode();    //member function
+        void display();
+        ~CLL(){         //destructor to delete the list
+            struct node *ptr=tail->next;
+            while(ptr!=tail){
+                struct node *temp=ptr;
+                ptr=ptr->next;
+                delete temp;
         }
         delete ptr;
     }
@@ -40,7 +40,7 @@ void CLL::insert(int a,bool x)
     }
     temp->next=tail->next;
     tail->next=temp;
-    if(x){
+    if(x==True){
         tail=temp;
     }
 }

@@ -30,5 +30,4 @@ class Solution:
             l2 = l2.next if l2 is not None else None
 
         result = dummyHead.next
-        dummyHead.next = None
         return result
