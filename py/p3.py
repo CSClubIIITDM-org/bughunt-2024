@@ -2,9 +2,9 @@
 #eg: [2, 4, 6, 17, 10] -> [17, 10] 
 
 def delete_starting_evens(list):
-  for item in list:
+  while 1:
     if list[0] % 2 == 0:
-      list.pop(0)
+      del(list[0])
     else:
       break
   return list

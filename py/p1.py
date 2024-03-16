@@ -7,8 +7,9 @@
 def asterisk_tree(height,level):
   if level > height:
     return
-  for j in range(2*level-1):
-    print("*", end="")
+  s="*"*(2*level-1)
+  print(s.center(2*height-1))
+  '''now pattern will be center aligned'''
   print()
   asterisk_tree(height, level + 1)
 
