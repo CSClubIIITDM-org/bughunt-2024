@@ -9,18 +9,19 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int* filterMultiples(int* arr, int N, int* NOut, int num) {
     int numPrimes = 0;
     *NOut = 0;
     for (int i = 0; i < N; i++) {
         if (arr[i] >= num && arr[i]%num == 0) {
-            *NOut++;
+            (*NOut)++;
         }
     }
     int* multiples = malloc((*NOut)*sizeof(int));
     int idx = 0;
-    for (int i = 0; i < *NOut; i++) {
+    for (int i = 0; i < N; i++) {
         if (arr[i] >= num && arr[i]%num == 0) {
             multiples[idx] = arr[i];
             idx++;
@@ -33,7 +34,8 @@ int main() {
     int arr[10] = {5, 6, 12, 20, 18, 24, 48, 58, 60, 68};
     // Multiples of 6
     int NOut;
-    int* multiples = filterMultiples(arr, 10, &NOut, 6);
+    int* multiples = malloc(100*sizeof(int));
+    multiples = filterMultiples(arr, 10, &NOut, 6);
     for (int i = 0; i < NOut; i++) {
         printf("%i ", multiples[i]);
     }
