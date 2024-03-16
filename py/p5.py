@@ -5,8 +5,7 @@ def get_number():
     try:
         val1 = int(val1)
         while val1 < 1 or val1 > 10:
-            val1 = input('Enter a number: ')
-            val1 = int(val1)
+            raise ValueError
 
         str_to_print = '{:.1f}'.format(val1)
         return str_to_print
