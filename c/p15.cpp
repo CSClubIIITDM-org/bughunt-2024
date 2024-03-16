@@ -11,11 +11,11 @@ void Upper(char *word) {
 int Check(char *S) {
     for(int k = 0, v = 0; S[k]; k++)
         switch(S[k]) {
-            case A:
-            case E:
-            case I:
-            case O:
-            case U: v++;
+            case A: v++; break;
+            case E:v++; break;
+            case I:v++; break;
+            case O:v++; break;
+            case U: v++; break;
         }
     return v;
 }
