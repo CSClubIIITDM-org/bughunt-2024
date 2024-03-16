@@ -1,5 +1,4 @@
 #program to perform binary addition
-
 def addBinary(a: str, b: str) -> str:
     s = []
     carry = 0
