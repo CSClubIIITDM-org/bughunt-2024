@@ -5,7 +5,7 @@
 float computeAverage(float* x, size_t* N) {
     float numerator = 0.0;
     float denominator = 0.0;
-    for (size_t i = 0; i < (size_t)N; i++) {
+    for (size_t i = 0; i < (size_t)*N; i++) {
         numerator += x[i];
         denominator++;
     }
