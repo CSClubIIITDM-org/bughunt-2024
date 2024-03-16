@@ -1,9 +1,9 @@
 //allocating memory to a pointer through a function
 
 #include<stdio.h>
+int x = 5;
 int *fun()
 {
-    int x = 5;
     return &x;
 }
 int main()
