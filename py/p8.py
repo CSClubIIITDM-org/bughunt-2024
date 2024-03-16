@@ -2,7 +2,7 @@
 
 class Node(object):
     # Doubly linked node
-    def __init__(self, data=None, next=None, prev=None):
+    def __init__(self, data, next=None, prev=None):
         self.data = data
         self.next = next
         self.prev = prev
@@ -35,7 +35,7 @@ class doubly_linked_list(object):
         while current:
             item_val = current.data
             current = current.next
-            yield item_val
+            print(item_val)
 
 items = doubly_linked_list()
 items.append_item('C#')
