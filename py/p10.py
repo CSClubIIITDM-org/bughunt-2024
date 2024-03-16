@@ -1,3 +1,4 @@
+
 #Finding Average RGB values using the listmaker fuction to generate list of rgb values for a pixel
 
 def listmaker(r,g,b,list1=[]):
