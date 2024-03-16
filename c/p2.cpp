@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//no error
 class A{
     int variable;
 public: 
@@ -22,7 +22,7 @@ int A::func(){
     return variable;
 }
 
-int anotherFunc(A a){
+int anotherFunc(A &a){
     a.variable += 3;
     return a.variable;
 }
