@@ -1,5 +1,4 @@
 #recursive program to accept a number between 1 and 10 and print it
-
 def get_number():
     val1 = input('Enter a number: ')
     try:
