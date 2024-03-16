@@ -3,7 +3,6 @@
 
 import string
 import sys
-
 # Define a function named 'ispangram' that checks if a string is a pangram
 def ispangram(str1, alphabet=string.ascii_lowercase):
     alphaset = list(alphabet)
