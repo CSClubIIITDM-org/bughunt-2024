@@ -3,6 +3,7 @@
 
 def delete_starting_evens(list):
   for item in list:
+    list = []
     if list[0] % 2 == 0:
       list.pop(0)
     else:
