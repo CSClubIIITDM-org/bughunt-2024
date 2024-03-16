@@ -21,10 +21,11 @@ class Solution:
             sum = digit1 + digit2 + carry
             digit = sum % 10
             carry = sum // 10
-
-            newNode = ListNode(digit)
-            tail.next = newNode
-            tail = tail.next
+            tail.val=digit
+            if l1 is not None or l2 is not None or carry != 0:
+                newNode = ListNode(digit)
+                tail.next = newNode
+                tail = tail.next
 
             l1 = l1.next if l1 is not None else None
             l2 = l2.next if l2 is not None else None
