@@ -7,9 +7,7 @@
 def asterisk_tree(height,level):
   if level > height:
     return
-  for j in range(2*level-1):
-    print("*", end="")
-  print()
+  print(" "*(height-level)+"*"*((2*level)-1))
   asterisk_tree(height, level + 1)
 
 n=int(input("Enter height of tree : "))

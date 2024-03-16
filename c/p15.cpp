@@ -5,11 +5,12 @@ using namespace std;
 void Upper(char *word) {
     for(int k = 0; word[k]; k ++)
         word[k] = toupper(word[k]);
-    Check(word);
+    cout << Check(word) << endl;
 }
 
 int Check(char *S) {
-    for(int k = 0, v = 0; S[k]; k++)
+    int v=0;
+    for(int k = 0; S[k]; k++)
         switch(S[k]) {
             case A:
             case E:
@@ -30,7 +31,7 @@ int main() {
         cout << Check(str) << endl;
         cout << "Type yes to continue, no to exit.";
         cin >> next;
-    } while(strcmp(next, "yes"));
+    } while(strcmp(next, "no")!=0);
 
     return 0;
 }
