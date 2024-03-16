@@ -2,20 +2,20 @@
 
 class Node(object):
     # Doubly linked node
-    def __init__(self, data=None, next=None, prev=None):
+    def _init_(self, data=None, next=None, prev=None):
         self.data = data
         self.next = next
         self.prev = prev
 	
 class doubly_linked_list(object):
-    def __init__(self):
+    def _init_(self):
         self.head = None
         self.tail = None
         self.count = 0
 
     def append_item(self, data):
         # Append an item 
-        new_item = Node(data, None, None)
+        new_item = Node()
         if self.head is None:
             self.head = new_item
             self.tail = self.head
@@ -26,16 +26,9 @@ class doubly_linked_list(object):
 
         self.count += 1
 
-    def print_foward(self):
-        print(self.iter())
-            
-    def iter(self):
-        # Iterate the list
-        current = self.head
-        while current:
-            item_val = current.data
-            current = current.next
-            yield item_val
+    def print_forward(self):
+        for item in self.iter():
+            print(item)
 
 items = doubly_linked_list()
 items.append_item('C#')
@@ -45,4 +38,4 @@ items.append_item('Java')
 items.append_item('Python')
 
 print("Print Items in the Doubly linked:")
-items.print_foward()
+items.print_forward()

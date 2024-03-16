@@ -2,7 +2,6 @@
 #Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
 
 import string
-import sys
 
 # Define a function named 'ispangram' that checks if a string is a pangram
 def ispangram(str1, alphabet=string.ascii_lowercase):
