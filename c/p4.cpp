@@ -6,17 +6,18 @@
 #include <string>
 using namespace std;
 
-string caesar(string s, int k, string direction){
+string caesar(string s, int k, string direction) {
     string ans = "";
-    for(int i=0;i<s.length();i++){
-        if(direction == "encode"){
-            ans += s[i] + k;
-        }
-        else if(direction == "decode"){
-            ans += s[i] - k;
+    for (int i = 0; i < s.length(); i++) {
+        if (direction == "encode") {
+            char encoded_char = 'a' + (s[i] - 'a' + k) % 26; // Modulo 26 to handle wraparound
+            ans += encoded_char;
+        } else if (direction == "decode") {
+            char decoded_char = 'a' + (s[i] - 'a' - k + 26) % 26; // Adding 26 before modulo to handle negative values
+            ans += decoded_char;
         }
     }
-    return ans;
+    return ans;
 }
 
 int main(){
