@@ -11,6 +11,11 @@ public:
     A(int variable){
         this->variable = variable;
     }
+int anotherFunc(A a){
+    a.variable += 3;
+    return a.variable;
+}
+
     int func();
     ~A(){
         cout << "Object destroyed" << endl;
@@ -22,13 +27,9 @@ int A::func(){
     return variable;
 }
 
-int anotherFunc(A a){
-    a.variable += 3;
-    return a.variable;
-}
 
 int main(){
     A a;
-    cout << a.func() + anotherFunc(a) << endl;
+    cout << a.func() + a.anotherFunc(a) << endl;
     return 0;
 }
