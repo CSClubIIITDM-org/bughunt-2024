@@ -1,4 +1,4 @@
-//CPP program to implement circular linked list
+//CPP program to implement circular linked list  (veeresh)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -129,6 +129,7 @@ int main(){
             }
             case 4:{         //exiting the menu
                 cout << "Exiting the menu..."<<endl;
+                break;
             }
             default: cout << "Invalid choice"<<endl; break;
         }

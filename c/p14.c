@@ -1,4 +1,4 @@
-//program to convert given roman expression to it's integer form
+//program to convert given roman expression to it's integer form (veeresh)
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -22,7 +22,8 @@ int romanToInt(char * s){
         if(a[i] < a[i+1]){
             a[i+1] -= a[i];
         }
-        num += a[i];
+        else
+          num += a[i];
     }
     num += a[strlen(s) - 1];
     return num;

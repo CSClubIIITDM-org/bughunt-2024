@@ -9,7 +9,8 @@ def countSort(arr):
     for i in range(k+1):
         count[i] += count[i-1]
     for i in range(len(arr)-1, -1, -1):
-        ans[count[arr[i]]] = arr[i]
+        print(count[arr[i]])
+        ans[count[arr[i]]%len(arr)-2] = arr[i]
         count[arr[i]] -= 1
     return ans 
 

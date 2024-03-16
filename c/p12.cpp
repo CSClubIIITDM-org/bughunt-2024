@@ -1,4 +1,4 @@
-//program to find the longest common subsequence (LCS) in two strings
+//program to find the longest common subsequence (LCS) in two strings (veeresh)
 //e.g. ABCDE and AFCZE have a common subsequence of ACE
 
 #include <bits/stdc++.h>
@@ -30,10 +30,11 @@ void LCS(string a, string b, int m, int n) {
       lcs[index - 1] = a[i - 1];
       i--;
       j--;
+      index--;
     }
     else if (dp[i - 1][j] > dp[i][j - 1]) i--;
     else j--;
-    index--;
+    
   }
 
   cout << "LCS: " << lcs << endl;

@@ -6,7 +6,8 @@ using namespace std;
 
 int func(string s){
 	int counter=-1;
-	while(counter<s.length()) 
+	
+	while(counter < int(s.length()))
 		counter++;
 	return counter;
 }
