@@ -5,7 +5,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void checkSum(int a[], int n, int t){
+void checkSum(int a[], int n, int t){hgjhg
     bool table[n+1][t+1];
     for(int j=1;j<=t;j++){
         table[0][j] = false;
