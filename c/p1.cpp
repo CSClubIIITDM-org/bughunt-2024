@@ -5,6 +5,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 void checkSum(int a[], int n, int t){
     bool table[n+1][t+1];
     for(int j=1;j<=t;j++){
@@ -29,14 +30,12 @@ void checkSum(int a[], int n, int t){
     }
     else{
         vector<int> ans;
-        while(n >0 && t>0){
-            while(table[n][t]){
-                n--;
-            }
-            if(table[n][t-a[n-1]]){
+        while(n > 0 && t > 0){
+            if(table[n][t] && !table[n-1][t]){ 
                 ans.push_back(a[n-1]);
                 t -= a[n-1];
             }
+            n--;
         }
 
         for(auto i:ans){

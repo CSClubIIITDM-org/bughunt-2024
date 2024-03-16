@@ -1,25 +1,24 @@
 #include <iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
 
+int Check(char *S) {
+    int v=0;
+    for(int k = 0; S[k]; k++)
+        switch(S[k]) {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U': v++;
+        }
+    return v;
+}
 void Upper(char *word) {
     for(int k = 0; word[k]; k ++)
         word[k] = toupper(word[k]);
     Check(word);
 }
-
-int Check(char *S) {
-    for(int k = 0, v = 0; S[k]; k++)
-        switch(S[k]) {
-            case A:
-            case E:
-            case I:
-            case O:
-            case U: v++;
-        }
-    return v;
-}
-
 
 int main() {
     char str[10], next[5];
