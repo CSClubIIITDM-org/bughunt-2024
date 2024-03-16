@@ -1,33 +1,35 @@
 #include<iostream>
 using namespace std;
 
-class A{
+class A {
     int variable;
-public: 
-    A(){
+public:
+    A() {
         cout << "Object created" << endl;
         this->variable = 10;
     }
-    A(int variable){
+    A(int variable) {
         this->variable = variable;
     }
     int func();
-    ~A(){
+    int getVariable() const { return variable; }
+    ~A() {
         cout << "Object destroyed" << endl;
     }
 };
 
-int A::func(){
+int A::func() {
     variable += 2;
     return variable;
 }
 
-int anotherFunc(A a){
-    a.variable += 3;
-    return a.variable;
+int anotherFunc(A& a) {
+    a.func(); // Call func() on a directly to modify its variable
+    a.variable += 3; // Modify the variable of a directly
+    return a.getVariable();
 }
 
-int main(){
+int main() {
     A a;
     cout << a.func() + anotherFunc(a) << endl;
     return 0;
