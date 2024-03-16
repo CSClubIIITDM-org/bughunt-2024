@@ -1,3 +1,5 @@
+#Python program to create a doubly linked list and print nodes from beginning
+
 class Node(object):
     # Doubly linked node
     def _init_(self, data=None, next=None, prev=None):
