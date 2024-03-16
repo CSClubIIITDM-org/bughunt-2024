@@ -5,14 +5,18 @@
 using namespace std;
 
 int func(string s){
-	int counter=-1;
-	while(counter<s.length()) 
-		counter++;
+	int counter=0;
+	int i = 0;
+	for(int i=0;i<s.length();i++)
+    {
+        counter++;
+    }
 	return counter;
 }
 
 int main(){
-	string s = "Welcome to Vashisht 2024!!"; 
+	string s = "Welcome to Vashisht 2024!!";
 	cout << func(s) << endl;
+	cout<<s.length();
 	return 0;
 }
