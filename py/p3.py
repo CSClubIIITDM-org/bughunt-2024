@@ -2,7 +2,8 @@
 #eg: [2, 4, 6, 17, 10] -> [17, 10] 
 
 def delete_starting_evens(list):
-  for item in list:
+  k = len(list)
+  for i in range(k):
     if list[0] % 2 == 0:
       list.pop(0)
     else:

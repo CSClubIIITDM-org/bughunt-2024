@@ -3,7 +3,7 @@ using namespace std;
 
 class A{
     int variable;
-public: 
+public:
     A(){
         cout << "Object created" << endl;
         this->variable = 10;
@@ -11,6 +11,12 @@ public:
     A(int variable){
         this->variable = variable;
     }
+
+    int operator ++(int num){
+        int ans = variable + num;
+        return ans;
+    }
+
     int func();
     ~A(){
         cout << "Object destroyed" << endl;
@@ -23,7 +29,7 @@ int A::func(){
 }
 
 int anotherFunc(A a){
-    a.variable += 3;
+    a += 3;
     return a.variable;
 }
 
