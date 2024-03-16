@@ -1,9 +1,10 @@
 //allocating memory to a pointer through a function
 
 #include<stdio.h>
+#include<stdlib.h>
 int *fun()
 {
-    int x = 5;
+    int *x = (int *)malloc(sizeof(int));
     return &x;
 }
 int main()

@@ -30,10 +30,11 @@ void LCS(string a, string b, int m, int n) {
       lcs[index - 1] = a[i - 1];
       i--;
       j--;
+      index--;
     }
     else if (dp[i - 1][j] > dp[i][j - 1]) i--;
     else j--;
-    index--;
+    
   }
 
   cout << "LCS: " << lcs << endl;
