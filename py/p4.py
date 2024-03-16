@@ -3,7 +3,7 @@
 def countSort(arr):
     k = max(arr)
     count = [0 for i in range(k+1)]
-    ans = [0 for i in range(len(arr))]
+    ans = [0 for i in range(k+1)]
     for i in arr:
         count[i] += 1
     for i in range(k+1):
