@@ -24,7 +24,7 @@ for i in range(p):
    for j in range(r):
        curr_val = 0
        for k in range(q):
-           curr_val += A[i][k]*B[k][j]
+           curr_val += A[i][k]*B[j][k]
        C[i][j] = curr_val
  
 print(C)
