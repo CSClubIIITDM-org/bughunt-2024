@@ -1,20 +1,18 @@
 #Python program to create a doubly linked list and print nodes from beginning
 
-class Node(object):
-    # Doubly linked node
-    def __init__(self, data=None, next=None, prev=None):
+ class Node(object):
+    def _init_(self, data=None, next=None, prev=None):
         self.data = data
         self.next = next
         self.prev = prev
 	
 class doubly_linked_list(object):
-    def __init__(self):
+    def _init_(self):
         self.head = None
         self.tail = None
         self.count = 0
 
     def append_item(self, data):
-        # Append an item 
         new_item = Node(data, None, None)
         if self.head is None:
             self.head = new_item
@@ -27,10 +25,10 @@ class doubly_linked_list(object):
         self.count += 1
 
     def print_foward(self):
-        print(self.iter())
+        for item in self.iter():
+            print(item)
             
     def iter(self):
-        # Iterate the list
         current = self.head
         while current:
             item_val = current.data
