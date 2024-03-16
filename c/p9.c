@@ -9,18 +9,18 @@
  */
 
 #include <stdio.h>
-
+#include <stdlib.h>
 int* filterMultiples(int* arr, int N, int* NOut, int num) {
     int numPrimes = 0;
     *NOut = 0;
     for (int i = 0; i < N; i++) {
         if (arr[i] >= num && arr[i]%num == 0) {
-            *NOut++;
+            (*NOut)++;
         }
     }
-    int* multiples = malloc((*NOut)*sizeof(int));
+    int* multiples =malloc((*NOut)*sizeof(int));
     int idx = 0;
-    for (int i = 0; i < *NOut; i++) {
+    for (int i = 0; i < N; i++) {
         if (arr[i] >= num && arr[i]%num == 0) {
             multiples[idx] = arr[i];
             idx++;

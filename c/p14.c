@@ -18,13 +18,18 @@ int romanToInt(char * s){
         }
     }
     int num=0;
-    for(int i=0;i<strlen(s)-1;i++){
+    int i;
+    for(i=0;i<strlen(s)-1;i++){
         if(a[i] < a[i+1]){
             a[i+1] -= a[i];
+            i++;
         }
         num += a[i];
     }
+    if(i==strlen(s)-1)
+    {
     num += a[strlen(s) - 1];
+    }
     return num;
 }
 

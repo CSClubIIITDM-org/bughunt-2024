@@ -2,7 +2,7 @@
 # input- 1 -> output- [1], input- 2 -> output- [2]
 
 def add_item(item, items=[]):
-   items.append(item)
+   items=[item]
    return items
 
 print(add_item(1))

@@ -4,7 +4,8 @@
 int *fun()
 {
     int x = 5;
-    return &x;
+    int *t=&x
+    return t;
 }
 int main()
 {
