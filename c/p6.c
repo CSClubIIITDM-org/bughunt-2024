@@ -1,11 +1,11 @@
-//allocating memory to a pointer through a function
-
 #include<stdio.h>
+
 int *fun()
 {
-    int x = 5;
+    static int x = 5; // Use a static variable
     return &x;
 }
+
 int main()
 {
     int *ptr = fun ();
