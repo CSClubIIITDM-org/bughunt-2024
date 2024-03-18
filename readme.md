@@ -1,6 +1,6 @@
 # Code Commandos
 
-Me and my team participated in an event **"Bug Hunt"** organized by in their college fest named as **"Vashisht"** organized by **IIITDM Kancheepuram** where we contributed by finding the bug, creating the issue and pull request to a GitHub repo which consists of a total of **27 files** where **15 consist of C/C++ code** and **12 of python code**.
+Me and my team participated in an event **"Bug Hunt"** organized by in their college fest named as **"Vashisht"** organized by **IIITDM Kancheepuram** where we contributed by finding the bug, creating the issue and pull request to a GitHub repo which consists of a total of **27 files** where **15 consist of C/C++ code** and **12 of python code** and receive **7th positition** in the event.
 
 Below is the rules of the BugHunt Vashisht Rules.
 
