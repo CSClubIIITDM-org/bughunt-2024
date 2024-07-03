@@ -55,5 +55,5 @@ int main(){
     cout << "target: ";
     cin >> t;
 
-    checkSum(a, n, t);
+    checkSum(a, n, t);
 }

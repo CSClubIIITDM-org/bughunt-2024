@@ -2,10 +2,11 @@
 
 #include <stdio.h>
 
-void main(){
-    int a=10;
+int main() {
+    int a = 10;
     int *ptr = &a;
 
-    *ptr++;
+    (*ptr)++;
     printf("%d", *ptr);
+    return 0;
 }

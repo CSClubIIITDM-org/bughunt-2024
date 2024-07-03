@@ -5,8 +5,9 @@
 #include<string.h>
 
 int romanToInt(char * s){
-    int *a = (int *)malloc(strlen(s) * sizeof(int));
-    for(int i=0;i<strlen(s);i++){
+    int *a = (int *)malloc((strlen(s) + 1) * sizeof(int));
+    
+    for(int i = 0; i < strlen(s); i++) {
         switch(s[i]){
             case 'I': a[i] = 1; break;
             case 'V': a[i] = 5; break;
@@ -17,18 +18,24 @@ int romanToInt(char * s){
             case 'M': a[i] = 1000; break;
         }
     }
-    int num=0;
-    for(int i=0;i<strlen(s)-1;i++){
-        if(a[i] < a[i+1]){
-            a[i+1] -= a[i];
+    
+    int num = 0;
+    
+    for(int i = 0; i < strlen(s) - 1; i++) {
+        if(a[i] < a[i + 1]) {
+            a[i + 1] -= a[i];
         }
         num += a[i];
     }
     num += a[strlen(s) - 1];
+    
+    free(a);
+    
     return num;
 }
 
 int main() {
     char roman[10] = "MMXXIV";
     printf("%d", romanToInt(roman));
+    return 0;
 }

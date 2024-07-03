@@ -2,17 +2,13 @@
 
 #include<iostream>
 #include<string>
-using namespace std;
-
-int func(string s){
-	int counter=-1;
-	while(counter<s.length()) 
-		counter++;
-	return counter;
-}
-
-int main(){
+using namespace std;   int func(string s) {
+    int counter = 0;
+    while (counter < s.length()) 
+        counter++;
+    return counter;
+}  int main(){
 	string s = "Welcome to Vashisht 2024!!"; 
 	cout << func(s) << endl;
-	return 0;
+	return 0;
 }
